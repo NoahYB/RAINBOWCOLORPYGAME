@@ -37,6 +37,7 @@ while not done:
     #References screen variable, pygame.display.set_mode.fill(WHITE)
     #fills screen white Drawing codes go below this
     #main event loop inputs and such
+    pygame.draw.rect(screen, (r,g,b), (0,0,20,400), 0)
     a = pygame.mouse.get_pos()
     for event in pygame.event.get(): #Searches for user input
         
@@ -48,14 +49,24 @@ while not done:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
                 screen.fill(BLACK)
-                
         if event.type == pygame.MOUSEMOTION:
-            pygame.draw.circle(screen, (r,g,b), (a[0],a[1]), 12, 2)
+            pygame.draw.circle(screen, (r,g,b), (a[0],a[1]), 12, 0)
             
         if pygame.mouse.get_pressed()[0]:
             r = RB.red_func()
             g = RB.green_func()
             b = RB.blue_func()
+    if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_RIGHT:
+                r = RB.red_func_change()
+                g = RB.green_func_change()
+                b = RB.blue_func_change()
+    if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                r = 0
+                g = 0
+                b = 0
+            
 
 
 

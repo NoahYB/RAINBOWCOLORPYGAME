@@ -31,3 +31,31 @@ class rainbow:
             return self.b
         else:
             return self.b
+    def green_func_change(self):
+        if self.r == 250 and self.g < 250 and self.b == 0:
+            self.g += 10
+            return self.g
+        elif self.r == 0 and self.g > 0 and self.b == 250:
+            self.g -= 10
+            return self.g
+        else:
+            return self.g
+    def red_func_change(self):
+        if self.r > 0 and self.g == 250 and self.b == 0:
+            self.r -= 10
+            return self.r
+        elif self.r < 250 and self.g == 0 and self.b == 250:
+            self.r += 10
+            return self.r
+        else:
+            return self.r
+    def blue_func_change(self):
+        if self.r == 0 and self.g == 250 and self.b < 250:
+            self.b += 10
+            return self.b
+        elif self.r == 250 and self.g == 0 and self.b > 0:
+            self.b -= 10
+            return self.b
+        else:
+            return self.b
+
