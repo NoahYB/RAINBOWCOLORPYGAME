@@ -1,5 +1,4 @@
 
-import sys
 #imports pygame
 import pygame
 #imports random
@@ -32,7 +31,9 @@ brush_size = 12
 while not done: 
     pygame.draw.rect(screen, (r,g,b), (0,0,20,400), 0)
     a = pygame.mouse.get_pos()
-    for event in pygame.event.get():       
+    
+    for event in pygame.event.get():
+        
         if event.type == pygame.QUIT: 
             done = True
             pygame.quit()
@@ -48,6 +49,10 @@ while not done:
                 brush_size -=10
                 if brush_size <0:
                     brush_size = 0
+            if event.key == pygame.K_RIGHT:
+                r = RB.red_func_change()
+                g = RB.green_func_change()
+                b = RB.blue_func_change()
         #DRAW
         if event.type == pygame.MOUSEMOTION:
             pygame.draw.circle(screen, (r,g,b), (a[0],a[1]), brush_size, 0)
@@ -56,22 +61,17 @@ while not done:
             r = RB.red_func()
             g = RB.green_func()
             b = RB.blue_func()
+        
+            
+    
     #CHANGES COLORS MORE QUICKLY
-    if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RIGHT:
-                r = RB.red_func_change()
-                g = RB.green_func_change()
-                b = RB.blue_func_change()
+    
     if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 r = 0
                 g = 0
                 b = 0
-    if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_m:
-                if event.type == pygame.MOUSEMOTION:
-                    x += 1
-                    time.sleep(x)
+    
     
 
 
