@@ -53,6 +53,8 @@ while not done:
                 r = RB.red_func_change()
                 g = RB.green_func_change()
                 b = RB.blue_func_change()
+            if event.key == pygame.K_p:
+                pygame.image.save(screen, "screenshot.png")
         #DRAW
         if event.type == pygame.MOUSEMOTION:
             pygame.draw.circle(screen, (r,g,b), (a[0],a[1]), brush_size, 0)
