@@ -1,8 +1,6 @@
 
 #imports pygame
 import pygame
-#imports random
-import random
 #import the class i made for rainbow color
 from classes import rainbow
 #starts pygame module
@@ -66,7 +64,7 @@ while not done:
         
             
     
-    #CHANGES COLORS MORE QUICKLY
+    #CHANGES COLORS TO BLACK
     
     if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:

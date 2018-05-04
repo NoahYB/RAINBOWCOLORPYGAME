@@ -1,4 +1,5 @@
 class rainbow:
+    """cycles through colors of the rainbow"""
     #250,250,0
     def __init__(self,red,green,blue):
         self.r = red
@@ -71,4 +72,3 @@ class rainbow:
             return self.b
         else:
             return self.b
-
