@@ -10,3 +10,5 @@ Tap arrow keys to change Color
 Left arrow keys changes color to black
 
 up and down area key changes size of brush
+
+Press 'p' to save a screenshot
